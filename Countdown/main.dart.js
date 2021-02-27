@@ -56706,7 +56706,7 @@ s=$.h8*30
 r=this.b
 q=r==null
 if((q?p:r.r)!=null)r=new U.me(M.alL(p,p,new D.p_(q?p:r.r,1)),C.i0,p)
-else r=new U.me(M.alL(p,p,new L.lz("assets/images/song.jpg",p,p)),C.i0,p)
+else r=new U.me(M.alL(p,p,new L.lz("assets/icon.png",p,p)),C.i0,p)
 s=M.iy(p,r,p,p,p,s,p,p,s)
 return new G.lv(l,K.nP(k,new O.a9y(o),G.aez(D.afh(p,new T.AW(K.A7(180),s,p),C.cW,!1,p,p,p,p,p,p,p,p,p,p,new O.a9z(o),p,p,p,p,p),j,m)),C.cS,n,new O.a9A(o),p)},
 $C:"$2",
