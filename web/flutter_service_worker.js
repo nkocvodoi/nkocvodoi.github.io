@@ -18,10 +18,10 @@ const RESOURCES = {
 "assets/assets/icon.png": "ebe233c185353c2da763aa3dece8c131",
 "assets/FontManifest.json": "83690a0c2960ba0f4a16ba9dea08d1cc",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "0442769a4a0b48a8ae552d7e5cff561d",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
-"assets/packages/fluttertoast/assets/toastify.css": "8beb4c67569fb90146861e66d94163d7",
-"assets/packages/fluttertoast/assets/toastify.js": "8f5ac78dd0b9b5c9959ea1ade77f68ae",
+"assets/NOTICES": "5ee95dc2ec339f7e11d6ab56434fa52b",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/packages/fluttertoast/assets/toastify.css": "a85675050054f179444bc5ad70ffc635",
+"assets/packages/fluttertoast/assets/toastify.js": "e7006a0a033d834ef9414d48db3be6fc",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "a126c025bab9a1b4d8ac5534af76a208",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "d80ca32233940ebadc5ae5372ccd67f9",
@@ -32,9 +32,9 @@ const RESOURCES = {
 "icons/Icon%20512.png": "f1a1b31c5da2b5b070ecfdcc77700611",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "2fc598d18c8d7d0195a890d4704240bf",
-"/": "2fc598d18c8d7d0195a890d4704240bf",
-"main.dart.js": "68873f455f7a4ce22785025a314a212f",
+"index.html": "4e80c469bc31062507a54a6b25940a12",
+"/": "4e80c469bc31062507a54a6b25940a12",
+"main.dart.js": "65f149f670dc725a42c53b8f8d765b88",
 "manifest.json": "cf93849a5c007974c30206fb623f736f",
 "version.json": "d8d98d7af05c7d7ed905a4dcd3a90811"
 };
@@ -54,7 +54,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
