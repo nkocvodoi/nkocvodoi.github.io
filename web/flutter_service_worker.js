@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "4f4367bee623e3bf7c5d26d23ec61c7b",
+  "assets/AssetManifest.json": "5a0c043b43f27b653412785c4973a59e",
 "assets/assets/background/background1.jpg": "b9fc359fd9c96aa54985d75ab2c1e211",
 "assets/assets/background/background10.jpg": "49470aa2cf34c5c77b72046bab07022c",
 "assets/assets/background/background2.jpg": "bb84329b8cc27581e531a037160f575d",
@@ -14,27 +14,26 @@ const RESOURCES = {
 "assets/assets/background/background7.jpg": "1eb1d87fbbc69ff8bf1f4e35b29d3eab",
 "assets/assets/background/background8.jpg": "133a791a7ab05a4bdaf6b37115cec23b",
 "assets/assets/background/background9.jpg": "9c7e32d147e21349c648b113eb45a71a",
+"assets/assets/fonts/Astronout.otf": "9dea3f1add263c9030dda130770472d4",
 "assets/assets/fonts/Quicksand.ttf": "f9baef8ac0d836e6486419e282e42336",
 "assets/assets/icon.png": "ebe233c185353c2da763aa3dece8c131",
-"assets/FontManifest.json": "83690a0c2960ba0f4a16ba9dea08d1cc",
+"assets/FontManifest.json": "d1ea7c08374065412872cb46fee01f17",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "729aa0bcc465f80959b89c71894742f3",
+"assets/NOTICES": "55c300228a73032a7674b33b84dfb9c8",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/fluttertoast/assets/toastify.css": "a85675050054f179444bc5ad70ffc635",
 "assets/packages/fluttertoast/assets/toastify.js": "e7006a0a033d834ef9414d48db3be6fc",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "a126c025bab9a1b4d8ac5534af76a208",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "d80ca32233940ebadc5ae5372ccd67f9",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"favicon.png": "14852c56c20693c1fff114fbd278796d",
 "flutter_facebook_auth.js": "3b3b32ad3973de3b393ef88861f3b72b",
 "Icon%2016.png": "71fc0dadb5aa45ac773ea94652d2cc36",
-"icons/Icon%20192.png": "2f1117b2570fd7cb0e03f90eedb8e925",
-"icons/Icon%20512.png": "f1a1b31c5da2b5b070ecfdcc77700611",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "4e80c469bc31062507a54a6b25940a12",
-"/": "4e80c469bc31062507a54a6b25940a12",
-"main.dart.js": "de12a790ba9776fd3f9f88a2d261ba5e",
+"icons/Icon-192.png": "a1ce0a0d5e4c5f1804d15dcd789ae180",
+"icons/Icon-512.png": "5cd4a364e04fd2cd4eb8a7a9c0817ee2",
+"index.html": "a6d1d94bf9326290c816764bd3582885",
+"/": "a6d1d94bf9326290c816764bd3582885",
+"main.dart.js": "097e73eb69229286b7d966c365ccee45",
 "manifest.json": "cf93849a5c007974c30206fb623f736f",
 "version.json": "d8d98d7af05c7d7ed905a4dcd3a90811"
 };
@@ -54,7 +53,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
