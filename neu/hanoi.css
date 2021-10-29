@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Oswald";
+    src: url(image/fonts/static/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(image/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header{ /* Chọn phần tử có class="header"*/
+    min-height: 220px;
+    min-width: 1170px;
+    background-color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav { /* Chọn phần tử <nav> */
+    display: flex;
+    padding: 1% 1% 2% 1% ; /*the space between its content and its border. %: Specifies the padding in percent of the width of the containing element */
+    /* top: 1%; right:1% bot:1% left:1% */
+    justify-content: space-between; /*Items will have space between them*/
+    align-items: center; /*Items are positioned at the center of the container*/
+}
+nav img{ /*Chọn phần tử <img> bên trong phần tử <nav>*/
+    width: 45px;
+}
+.nav-links{
+    flex:1; /*sets the flexible length on flexible items.*/
+    text-align: right; /*Aligns the text to the right*/
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block; /*Displays an element as an inline-level block container.*/
+    padding: 8px 12px;
+    position: relative; /*The element is positioned relative to its normal position*/
+}
+.nav-links ul li a{
+    color: rgba(31,31,31,1);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*Chèn một cái gì đó dưới nội dung của mỗi phần tử <ul> <li> */
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgba(31,31,31,1);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+/*Chọn các liên kết khi di chuột qua*/
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    display: flex;
+    align-items: center;
+    font-size: 43px;
+    width: 274px;
+    color: #1f1f1f;
+    text-align: center;
+    padding: 0px 40px;
+    margin: auto;
+    border-bottom: 10px solid #424242;
+}
+
+/*---------intro--------*/
+.intro{
+    color: #ffffff;
+    min-width: 1170px;
+    background-color: #424242;
+    position:absolute;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 15%;
+    padding: 48px 0px;
+}
+.col1 img{
+    width: 463.734px;
+    height: 276px;
+}
+.col2{
+    margin-left: 2px;
+    padding: 0px 20px;
+    font-size: 38px;
+}
+.col2 p{
+    margin-top: 3%;
+    font-size: 20px;
+}
+.row2{
+    background-image:linear-gradient( rgba(32, 36, 19, 0.6), rgba(32, 36, 19, 0.6)), url(image/backrow2.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.row2-img{
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0px;
+    margin: 0% 15%;
+}
+.col4 img{
+    width: 463.734px;
+    height: 276px;
+    margin: 0% 15% 0% 5%;
+}
+.col3{
+    margin-top: 3%;
+    font-size: 20px;
+}
+.vid{
+    margin: 0% 11%;
+    padding: 48px 0px;
+    text-align: center;
+}
+/*------Footer------*/
+footer{
+    color: #1f1f1f;
+    width: 100%;
+    height: 40px;
+    background-color: #ffffffff;
+    background-size: cover;
+    position: fixed;
+    bottom: 0px;
+}
+footer p{
+    font-size: 14px;
+    margin: 0% 11%;
+    padding: 10px 0px 10px 0px;
+    align-content: center;
+}
